@@ -1,0 +1,18 @@
+# Core (MVPS mining pipeline + synthetic stress tests)
+numpy>=2
+polars>=1.36
+scipy>=1.13
+scikit-learn>=1.6
+matplotlib>=3.8
+
+# Parquet I/O backend for polars/pandas
+pyarrow>=14.0
+
+# Raw CSV loaders and public-dataset adapters
+pandas>=2.1
+tqdm>=4.66
+
+# XES event-log parsing for the public process-mining corpora
+# (BPI 2012, Hospital Billing, Sepsis adapters). Not needed for the
+# synthetic experiments or the core mining algorithm.
+pm4py>=2.7
