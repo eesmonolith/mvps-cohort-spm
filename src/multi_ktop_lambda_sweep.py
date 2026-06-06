@@ -126,7 +126,7 @@ def run_dataset(dataset_name, lambdas=(1.0, 10.0, 50.0, 100.0, 200.0),
 
 def main():
     out = {}
-    for ds in ["edu_kor", "codle_hashed", "bpi2012"]:
+    for ds in ["edu_kor", "edub_hashed", "bpi2012"]:
         try:
             out[ds] = run_dataset(ds)
         except Exception as e:

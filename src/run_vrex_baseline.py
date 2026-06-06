@@ -53,7 +53,7 @@ def run_one(ds_name, lam=500.0, K_top=50, max_len=2, theta_sup=0.02):
 
 def main():
     out = {}
-    for ds in ['edu_kor', 'codle_hashed', 'bpi2012', 'sepsis', 'oulad']:
+    for ds in ['edu_kor', 'edub_hashed', 'bpi2012', 'sepsis', 'oulad']:
         try:
             fold_aucs = run_one(ds, lam=500.0)
             out[ds] = {'lam': 500.0, 'per_fold': fold_aucs,

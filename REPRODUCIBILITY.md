@@ -95,7 +95,7 @@ PYTHONPATH=. python3 -m src.bench_polyk_scaling
 
 ```bash
 # 1. Build sequences + cluster labels from the (private) Edu raw CSVs.
-#    Set HPIC_DATA_RAW / HPIC_CODLE_RAW to point at the raw corpora.
+#    Set MVPS_DATA_RAW / MVPS_EDUB_RAW to point at the raw corpora.
 PYTHONPATH=. python3 -m src.build_sequences
 PYTHONPATH=. python3 -m src.cluster_labels
 

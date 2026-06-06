@@ -4,10 +4,10 @@ from pathlib import Path
 
 # === Paths ===
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-# Raw (private) corpus location. Override via HPIC_DATA_RAW env var; defaults
+# Raw (private) corpus location. Override via MVPS_DATA_RAW env var; defaults
 # to a project-local data/raw directory so the repo is runnable without the
 # non-redistributable raw event logs.
-DATA_RAW = Path(os.environ.get("HPIC_DATA_RAW", str(PROJECT_ROOT / "data" / "raw")))
+DATA_RAW = Path(os.environ.get("MVPS_DATA_RAW", str(PROJECT_ROOT / "data" / "raw")))
 DATA_PROC = PROJECT_ROOT / "data" / "processed"
 DATA_INTERIM = PROJECT_ROOT / "data" / "interim"
 DATA_EXT = PROJECT_ROOT / "data" / "external"

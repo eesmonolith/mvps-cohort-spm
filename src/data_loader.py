@@ -1,5 +1,5 @@
 """
-Load raw Kor 3-semester CSVs with python-engine quoted parsing
+Load raw primary-Edu-corpus CSVs with python-engine quoted parsing
 (multi-line `code` columns break naive CSV).
 
 Each loader returns a polars DataFrame with normalized column names.

@@ -1,14 +1,14 @@
 """
-codle_K12_python_hashed adapter — second education-domain dataset.
+EduB hashed adapter — second programming-tuition corpus.
 
-Different student population (anonymised 2025 year, 14,687 students) on
-same Codle platform as Kor 3-semester data. Uses same event vocabulary
-as the main Edu dataset to enable transfer comparisons.
+Different student population (anonymised, 14,687 students) using the
+same event vocabulary as the primary Edu corpus, to enable transfer
+comparisons across two education-domain datasets.
 
-Cohort axis: quarter of 2025 (Q1=Jan-Mar, Q2=Apr-Jun, Q3=Jul-Sep,
+Cohort axis: calendar quarter (Q1=Jan-Mar, Q2=Apr-Jun, Q3=Jul-Sep,
               Q4=Oct-Dec) → K=4.
 Cluster axis: KMeans on per-student behavioural features → M=4
-              (same feature set as main Edu).
+              (same feature set as the primary Edu corpus).
 """
 from __future__ import annotations
 
@@ -27,8 +27,8 @@ from src.config import (
     error_name_to_token, submission_status_to_token,
 )
 
-# Private corpus; override via HPIC_CODLE_RAW, else relative to HPIC_DATA_RAW.
-RAW = Path(os.environ.get("HPIC_CODLE_RAW", str(DATA_RAW / "codle_K12_python")))
+# Private corpus; override via MVPS_EDUB_RAW, else relative to MVPS_DATA_RAW.
+RAW = Path(os.environ.get("MVPS_EDUB_RAW", str(DATA_RAW / "edub_hashed")))
 
 # Quarter labels
 QUARTERS = ["q1_2025", "q2_2025", "q3_2025", "q4_2025"]
@@ -48,13 +48,13 @@ def _ts_to_quarter_label(ts: pd.Timestamp) -> str | None:
     return QUARTERS[QUARTER_MONTH_MAP[ts.month]]
 
 
-def load_codle_events() -> pl.DataFrame:
+def load_edub_events() -> pl.DataFrame:
     """Merge submissions + executions + error_help into one event stream."""
     def _read(path, cols):
         return pd.read_csv(path, engine="python", on_bad_lines="skip",
                            quoting=1, usecols=cols)
 
-    print("loading codle hashed CSVs...")
+    print("loading EduB hashed CSVs...")
     sub = _read(RAW / "submissions_hashed.csv",
                 ["problem_id", "user_id", "status", "timestamp"])
     ex = _read(RAW / "executions_hashed.csv",
@@ -200,14 +200,14 @@ def build_clusters(traj: pl.DataFrame, k: int = 4, seed: int = 42) -> pl.DataFra
 
 
 def main():
-    events = load_codle_events()
+    events = load_edub_events()
     events = insert_session_breaks(events)
     traj = build_trajectories(events)
     print(f"trajectories: {traj.height}")
     if traj.height == 0:
         raise RuntimeError("No trajectories — check timestamp filtering")
 
-    seq_out = DATA_PROC / "sequences_codle_hashed.parquet"
+    seq_out = DATA_PROC / "sequences_edub_hashed.parquet"
     traj.write_parquet(seq_out)
     print(f"wrote {seq_out}")
 
@@ -217,7 +217,7 @@ def main():
 
     # Clusters
     clu = build_clusters(traj)
-    cluster_out = DATA_PROC / "cluster_labels_codle_hashed.parquet"
+    cluster_out = DATA_PROC / "cluster_labels_edub_hashed.parquet"
     clu.select(["user_id", "cohort_label", "cluster_id"]).write_parquet(cluster_out)
     print(f"wrote {cluster_out}")
 

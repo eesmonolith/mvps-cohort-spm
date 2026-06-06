@@ -87,9 +87,9 @@ data**. Public-corpus adapters expect their files under
 The private Edu corpora are not redistributed. Their location is
 resolved from environment variables (default: `data/raw/`):
 
-- `HPIC_DATA_RAW` — root of the private raw corpora (default `data/raw`).
-- `HPIC_CODLE_RAW` — the hashed Codle K-12 Python corpus
-  (default `$HPIC_DATA_RAW/codle_K12_python`).
+- `MVPS_DATA_RAW` — root of the private raw corpora (default `data/raw`).
+- `MVPS_EDUB_RAW` — the hashed EduB programming corpus
+  (default `$MVPS_DATA_RAW/edub_hashed`).
 
 ## Reproducing the main results
 
