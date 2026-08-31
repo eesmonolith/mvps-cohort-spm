@@ -105,7 +105,7 @@ def run_dataset(dataset_name: str, K_top: int = 50, max_len: int = 2,
 
 def main():
     out = {}
-    for ds in ["edu_kor", "edub_hashed", "bpi2012", "sepsis"]:
+    for ds in ["edu_kor", "codle_hashed", "bpi2012", "sepsis"]:
         try:
             out[ds] = run_dataset(ds)
         except Exception as e:

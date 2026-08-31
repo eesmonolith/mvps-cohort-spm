@@ -1,0 +1,56 @@
+{
+  "K7_AUC_activity_features_per_module": {
+    "AAA": 0.858,
+    "BBB": 0.911,
+    "CCC": 0.934,
+    "DDD": 0.918,
+    "EEE": 0.957,
+    "FFF": 0.958,
+    "GGG": 0.913,
+    "mean": 0.9223,
+    "std": 0.034
+  },
+  "K22_AUC_activity_features_per_presentation": {
+    "mean": 0.9257,
+    "std": 0.0523
+  },
+  "cohort_IG_variance": {
+    "K7_sigma2_g": 0.00673,
+    "K7_CV": 0.831,
+    "K22_sigma2_g": 0.008041,
+    "K22_CV": 0.811
+  },
+  "pass_rate_per_module": {
+    "AAA": 0.745,
+    "BBB": 0.474,
+    "CCC": 0.449,
+    "DDD": 0.416,
+    "EEE": 0.562,
+    "FFF": 0.574,
+    "GGG": 0.597
+  },
+  "between_module_pass_rate_variance": 0.0122,
+  "tma_score_per_module": {
+    "AAA": 68.2,
+    "BBB": 68.5,
+    "CCC": 74.4,
+    "DDD": 68.3,
+    "EEE": 78.4,
+    "FFF": 73.8,
+    "GGG": 67.7
+  },
+  "mvps_simulation_leave_one_module_out": {
+    "all_features": {
+      "mean": 0.8372,
+      "std": 0.0698
+    },
+    "mvps_var_ig": {
+      "mean": 0.8609,
+      "std": 0.0484
+    },
+    "freq_mean_ig": {
+      "mean": 0.8739,
+      "std": 0.0375
+    }
+  }
+}

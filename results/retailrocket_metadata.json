@@ -1,0 +1,22 @@
+{
+  "vocab": [
+    "view",
+    "addtocart",
+    "transaction",
+    "session_break"
+  ],
+  "cluster_names": {
+    "0": "viewer",
+    "1": "cart_abandoner",
+    "2": "converter"
+  },
+  "cohorts": [
+    "may2015",
+    "jun2015",
+    "jul2015",
+    "aug2015",
+    "sep2015"
+  ],
+  "n_sequences": 115143,
+  "min_events": 5
+}

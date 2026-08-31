@@ -1,7 +1,24 @@
+# Byte-compiled / cache
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# OS
 .DS_Store
-results/
-logs/
+
+# Downloaded public-corpus raw data (see README "Data preparation")
+data/external/*
+!data/external/.gitkeep
+!data/external/README.md
+
+# Any processed/derived data generated locally by the adapters
 data/processed/
 data/interim/
+
+# Local run artifacts (regenerable via the adapters + run_* scripts)
+*.parquet
+
+# Editors
+.vscode/
+.idea/

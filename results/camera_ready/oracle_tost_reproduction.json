@@ -1,0 +1,162 @@
+{
+  "description": "Reconstruction of the 'Equivalence to the per-fold oracle' paragraph (experiments.tex). See module docstring for provenance and the CI caveat.",
+  "baselines_used": [
+    "freq_only",
+    "stab_only",
+    "discrim_only",
+    "intersect",
+    "v1_pooled",
+    "r1_lam50",
+    "min_ig"
+  ],
+  "corpora": [
+    "edu_kor",
+    "codle_hashed",
+    "bpi2012",
+    "sepsis"
+  ],
+  "per_corpus": {
+    "edu_kor": {
+      "display_name": "Edu",
+      "n_folds": 3,
+      "mvps_per_fold": [
+        0.7875750707553059,
+        0.776175519910575,
+        0.8218428062381942
+      ],
+      "oracle_per_fold": [
+        0.7788463160565892,
+        0.7619100643276451,
+        0.8155630156412192
+      ],
+      "delta_per_fold_pp": [
+        0.8728754698716701,
+        1.426545558292991,
+        0.6279790596974921
+      ],
+      "mean_delta_pp": 0.9758000292873844
+    },
+    "codle_hashed": {
+      "display_name": "EduB",
+      "n_folds": 4,
+      "mvps_per_fold": [
+        0.9450933245865147,
+        0.9294502962598656,
+        0.9484011807593693,
+        0.9202074205023887
+      ],
+      "oracle_per_fold": [
+        0.9340949306326783,
+        0.9204594694168831,
+        0.9470228141840182,
+        0.9163134877403283
+      ],
+      "delta_per_fold_pp": [
+        1.0998393953836394,
+        0.899082684298258,
+        0.13783665753510643,
+        0.38939327620604036
+      ],
+      "mean_delta_pp": 0.631538003355761
+    },
+    "bpi2012": {
+      "display_name": "BPI",
+      "n_folds": 5,
+      "mvps_per_fold": [
+        0.986388736146968,
+        0.9869642587997426,
+        0.9825037604461846,
+        0.9842747470847137,
+        0.9824070065358766
+      ],
+      "oracle_per_fold": [
+        0.986388736146968,
+        0.9869642587997426,
+        0.9825327947374555,
+        0.9842747470847136,
+        0.9824070065358769
+      ],
+      "delta_per_fold_pp": [
+        0.0,
+        0.0,
+        -0.002903429127087964,
+        1.1102230246251565e-14,
+        -2.220446049250313e-14
+      ],
+      "mean_delta_pp": -0.0005806858254198133
+    },
+    "sepsis": {
+      "display_name": "Sepsis",
+      "n_folds": 4,
+      "mvps_per_fold": [
+        0.728954134371726,
+        0.7557657467863841,
+        0.725437823695216,
+        0.7291285645294644
+      ],
+      "oracle_per_fold": [
+        0.7347265668575323,
+        0.7612141828716031,
+        0.7439741255894609,
+        0.7409125954517064
+      ],
+      "delta_per_fold_pp": [
+        -0.5772432485806389,
+        -0.5448436085219055,
+        -1.8536301894244822,
+        -1.1784030922242006
+      ],
+      "mean_delta_pp": -1.0385300346878068
+    }
+  },
+  "pooled": {
+    "n_folds": 16,
+    "mean_mvps": 0.8744106498380306,
+    "mean_oracle": 0.8736003195046513,
+    "mean_diff": 0.0008103303333792944,
+    "ci_95_paired_t": [
+      -0.0036963780512640114,
+      0.0053170387180226
+    ],
+    "ci_note": "Paired-t 95% CI on (MVPS - oracle) over the pooled 16 folds. Close to but not bit-identical with the paper's reported [-0.005, +0.006] -- see module docstring."
+  },
+  "tost": {
+    "epsilon": 0.01,
+    "p_tost": 0.0002878600493560088,
+    "lower_test": {
+      "t": 5.11275008494945,
+      "p": 6.369354956326487e-05
+    },
+    "upper_test": {
+      "t": -4.34625796989731,
+      "p": 0.0002878600493560088
+    }
+  },
+  "matches_paper_claim": {
+    "claimed_delta_pp": {
+      "edu_kor": 0.98,
+      "codle_hashed": 0.63,
+      "bpi2012": 0.0,
+      "sepsis": -1.04
+    },
+    "reproduced_delta_pp": {
+      "edu_kor": 0.98,
+      "codle_hashed": 0.63,
+      "bpi2012": -0.0,
+      "sepsis": -1.04
+    },
+    "claimed_pooled_mean": 0.874,
+    "reproduced_pooled_mean_mvps": 0.874,
+    "reproduced_pooled_mean_oracle": 0.874,
+    "claimed_p_tost": 0.0003,
+    "reproduced_p_tost": 0.0003,
+    "claimed_ci_95": [
+      -0.005,
+      0.006
+    ],
+    "reproduced_ci_95": [
+      -0.0037,
+      0.0053
+    ]
+  }
+}

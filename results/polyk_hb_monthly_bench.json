@@ -1,0 +1,12 @@
+{
+  "K": 36,
+  "M": 3,
+  "V": 15,
+  "N": 43829,
+  "n_candidates": 19,
+  "poly_us_per_call": 35055.72846061305,
+  "poly_total_seconds": 33.3029420375824,
+  "vertex_2_KM": 3.2451855365842673e+32,
+  "facewise_3_K": 1.5009463529699914e+17,
+  "poly_ops_per_call": 474
+}

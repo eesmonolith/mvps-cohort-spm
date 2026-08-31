@@ -49,7 +49,8 @@ def fig_nonsep():
     ax.bar(x - w/2, spearman, w, label="Spearman $\\rho$",
            color="C0", alpha=0.9, edgecolor="black", linewidth=0.4)
     ax.bar(x + w/2, kendall,  w, label="Kendall $\\tau$",
-           color="C3", alpha=0.9, edgecolor="black", linewidth=0.4)
+           color="C3", alpha=0.9, edgecolor="black", linewidth=0.4,
+           hatch="//")
     ax.set_xticks(x)
     ax.set_xticklabels([f"$\\lambda{{=}}{l}$" for l in lams])
     ax.set_ylabel("rank correlation with $S^{(v1)}$")

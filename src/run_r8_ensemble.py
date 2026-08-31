@@ -98,7 +98,7 @@ def run_dataset(name, K_top=50, K_per=20):
 
 def main():
     out = {}
-    for ds in ["edu_kor", "edub_hashed", "bpi2012", "sepsis", "oulad"]:
+    for ds in ["edu_kor", "codle_hashed", "bpi2012", "sepsis", "oulad"]:
         try:
             out[ds] = run_dataset(ds)
         except Exception as e:
@@ -110,13 +110,13 @@ def main():
 
     print("\n" + "=" * 80)
     print(f"{'Method':20s}", end="")
-    for ds in ["edu_kor", "edub_hashed", "bpi2012", "sepsis", "oulad"]:
+    for ds in ["edu_kor", "codle_hashed", "bpi2012", "sepsis", "oulad"]:
         print(f"{ds[:8]:>10s}", end="")
     print()
     print("-" * 80)
     for m in ["stab", "r1", "r7d", "r8_union_K50", "r8_union_K20each"]:
         print(f"{m:20s}", end="")
-        for ds in ["edu_kor", "edub_hashed", "bpi2012", "sepsis", "oulad"]:
+        for ds in ["edu_kor", "codle_hashed", "bpi2012", "sepsis", "oulad"]:
             s = out[ds].get(m, {})
             mean = s.get("mean")
             print(f"{mean:>10.3f}" if mean is not None else f"{'--':>10s}", end="")

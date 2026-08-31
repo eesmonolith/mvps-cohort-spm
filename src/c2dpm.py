@@ -83,14 +83,14 @@ def retailrocket_spec() -> DatasetSpec:
     )
 
 
-def edub_hashed_spec() -> DatasetSpec:
-    from src.edub_adapter import QUARTERS
+def codle_hashed_spec() -> DatasetSpec:
+    from src.codle_hashed_adapter import QUARTERS
     return DatasetSpec(
-        name="edub_hashed",
-        vocab=list(ID_TO_TOKEN.values()),  # same vocab as primary Edu corpus
+        name="codle_hashed",
+        vocab=list(ID_TO_TOKEN.values()),  # same vocab as Kor
         cohort_keys=QUARTERS,
-        seq_files={"_all": DATA_PROC / "sequences_edub_hashed.parquet"},
-        cluster_file=DATA_PROC / "cluster_labels_edub_hashed.parquet",
+        seq_files={"_all": DATA_PROC / "sequences_codle_hashed.parquet"},
+        cluster_file=DATA_PROC / "cluster_labels_codle_hashed.parquet",
     )
 
 
@@ -164,7 +164,7 @@ def bpi2012_amount_spec() -> DatasetSpec:
 DATASET_REGISTRY = {
     "edu_kor": kor_spec,
     "retailrocket": retailrocket_spec,
-    "edub_hashed": edub_hashed_spec,
+    "codle_hashed": codle_hashed_spec,
     "bpi2012": bpi2012_spec,
     "bpi2012_amount": bpi2012_amount_spec,
     "sepsis": sepsis_spec,

@@ -1,0 +1,26 @@
+{
+  "vocab": [
+    "A_ACCEPTED",
+    "A_ACTIVATED",
+    "A_FINALIZED",
+    "A_PARTLYSUBMITTED",
+    "A_PREACCEPTED",
+    "A_REGISTERED",
+    "A_SUBMITTED",
+    "O_ACCEPTED",
+    "O_CANCELLED",
+    "O_CREATED",
+    "O_DECLINED",
+    "O_SELECTED",
+    "O_SENT",
+    "O_SENT_BACK",
+    "W_Afhandelen leads",
+    "W_Beoordelen fraude",
+    "W_Completeren aanvraag",
+    "W_Nabellen incomplete dossiers",
+    "W_Nabellen offertes",
+    "W_Valideren aanvraag",
+    "W_Wijzigen contractgegevens"
+  ],
+  "n": 21
+}

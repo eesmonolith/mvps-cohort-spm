@@ -1,0 +1,564 @@
+{
+  "table_v_audit": {
+    "description": "Audit of camera-ready/source/sections/experiments.tex Table V (tab:transfer) and its caption 'Wilcoxon p<0.05 one-sided for all 6 baselines; Holm p<=0.064'.",
+    "ks_swept": [
+      5,
+      10,
+      20,
+      50
+    ],
+    "n_folds_raw": 3,
+    "part1_reproduce_existing_n12_pooled": {
+      "freq_only": {
+        "n": 12,
+        "median_diff_pp": 20.806027223158928,
+        "wilcoxon_stat": 78.0,
+        "wilcoxon_p_one_sided": 0.000244140625,
+        "n_positive": 12,
+        "matches_existing_json": true
+      },
+      "stab_only": {
+        "n": 12,
+        "median_diff_pp": 2.389580597628166,
+        "wilcoxon_stat": 61.0,
+        "wilcoxon_p_one_sided": 0.046142578125,
+        "n_positive": 9,
+        "matches_existing_json": true
+      },
+      "discrim_only": {
+        "n": 12,
+        "median_diff_pp": 3.9480722843718175,
+        "wilcoxon_stat": 77.0,
+        "wilcoxon_p_one_sided": 0.00048828125,
+        "n_positive": 11,
+        "matches_existing_json": true
+      },
+      "intersect": {
+        "n": 12,
+        "median_diff_pp": 2.017243590074347,
+        "wilcoxon_stat": 63.0,
+        "wilcoxon_p_one_sided": 0.031982421875,
+        "n_positive": 10,
+        "matches_existing_json": true
+      },
+      "v1_pooled": {
+        "n": 12,
+        "median_diff_pp": 4.138003610443336,
+        "wilcoxon_stat": 77.0,
+        "wilcoxon_p_one_sided": 0.00048828125,
+        "n_positive": 11,
+        "matches_existing_json": true
+      },
+      "min_ig": {
+        "n": 12,
+        "median_diff_pp": 0.7767886097903798,
+        "wilcoxon_stat": 67.0,
+        "wilcoxon_p_one_sided": 0.013427734375,
+        "n_positive": 10,
+        "matches_existing_json": true
+      }
+    },
+    "part2_honest_fold_level_n3": {
+      "freq_only": {
+        "fold_summary_diff_pp": [
+          21.253856558853734,
+          16.028765019006443,
+          22.07754881436912
+        ],
+        "n_folds": 3,
+        "wilcoxon_exact_n3": {
+          "stat": 6.0,
+          "p_one_sided": 0.125,
+          "floor_note": "n=3 paired diffs -> best-achievable one-sided signed-rank p is 0.125 (1/8); cannot report p<0.05 with this design."
+        },
+        "sign_test_exact_n3": {
+          "n_used": 3,
+          "n_positive": 3,
+          "p_one_sided": 0.125
+        },
+        "fold_level_permutation_2pow3": {
+          "observed_mean_diff_pp": 19.78672346407643,
+          "p_one_sided": 0.125,
+          "all_8_permutation_stats_pp": [
+            19.78672346407643,
+            5.068357587830352,
+            9.100880118072137,
+            -5.617485758173943,
+            5.617485758173943,
+            -9.100880118072137,
+            -5.068357587830352,
+            -19.78672346407643
+          ],
+          "note": "Exact sign-flip permutation over the 3 independent LOCO folds (2^3=8 equally likely sign patterns under H0: no systematic direction). This is the correct exchangeability unit -- folds are independent, K-values computed on the same fold are not."
+        },
+        "per_K_breakdown": {
+          "5": {
+            "diff_pp": [
+              21.640658464678943,
+              12.782270157971865,
+              23.389443265338627
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "10": {
+            "diff_pp": [
+              23.68877792948634,
+              13.318800288161913,
+              26.33956765363751
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "20": {
+            "diff_pp": [
+              24.366505028958485,
+              19.971395981638917,
+              25.536654773997856
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "50": {
+            "diff_pp": [
+              15.319484812291172,
+              18.042593648253067,
+              13.044529564502483
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          }
+        }
+      },
+      "stab_only": {
+        "fold_summary_diff_pp": [
+          5.592679831897521,
+          -0.612552427888946,
+          3.9217044995544987
+        ],
+        "n_folds": 3,
+        "wilcoxon_exact_n3": {
+          "stat": 5.0,
+          "p_one_sided": 0.25,
+          "floor_note": "n=3 paired diffs -> best-achievable one-sided signed-rank p is 0.125 (1/8); cannot report p<0.05 with this design."
+        },
+        "sign_test_exact_n3": {
+          "n_used": 3,
+          "n_positive": 2,
+          "p_one_sided": 0.5
+        },
+        "fold_level_permutation_2pow3": {
+          "observed_mean_diff_pp": 2.9672773011876914,
+          "p_one_sided": 0.25,
+          "all_8_permutation_stats_pp": [
+            2.9672773011876914,
+            0.35280763481802535,
+            3.3756455864469883,
+            0.7611759200773227,
+            -0.7611759200773227,
+            -3.3756455864469883,
+            -0.35280763481802535,
+            -2.9672773011876914
+          ],
+          "note": "Exact sign-flip permutation over the 3 independent LOCO folds (2^3=8 equally likely sign patterns under H0: no systematic direction). This is the correct exchangeability unit -- folds are independent, K-values computed on the same fold are not."
+        },
+        "per_K_breakdown": {
+          "5": {
+            "diff_pp": [
+              14.183910382536613,
+              3.392671827057281,
+              13.465217754523662
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "10": {
+            "diff_pp": [
+              3.407647749797138,
+              -6.0473033991475855,
+              0.7512059885008582
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "20": {
+            "diff_pp": [
+              1.9020667459824447,
+              -2.9237289666071864,
+              -0.4188596047820292
+            ],
+            "n": 3,
+            "n_positive": 1,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "50": {
+            "diff_pp": [
+              2.877094449273887,
+              3.128150827141707,
+              1.8892538599755038
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          }
+        }
+      },
+      "discrim_only": {
+        "fold_summary_diff_pp": [
+          4.784680723505341,
+          1.7502595899822226,
+          4.532591842916925
+        ],
+        "n_folds": 3,
+        "wilcoxon_exact_n3": {
+          "stat": 6.0,
+          "p_one_sided": 0.125,
+          "floor_note": "n=3 paired diffs -> best-achievable one-sided signed-rank p is 0.125 (1/8); cannot report p<0.05 with this design."
+        },
+        "sign_test_exact_n3": {
+          "n_used": 3,
+          "n_positive": 3,
+          "p_one_sided": 0.125
+        },
+        "fold_level_permutation_2pow3": {
+          "observed_mean_diff_pp": 3.6891773854681627,
+          "p_one_sided": 0.125,
+          "all_8_permutation_stats_pp": [
+            3.6891773854681627,
+            0.6674494901902129,
+            2.5223376588133477,
+            -0.49939023646460207,
+            0.49939023646460207,
+            -2.5223376588133477,
+            -0.6674494901902129,
+            -3.6891773854681627
+          ],
+          "note": "Exact sign-flip permutation over the 3 independent LOCO folds (2^3=8 equally likely sign patterns under H0: no systematic direction). This is the correct exchangeability unit -- folds are independent, K-values computed on the same fold are not."
+        },
+        "per_K_breakdown": {
+          "5": {
+            "diff_pp": [
+              4.24064093613824,
+              -0.05497622252722545,
+              4.559138109718841
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "10": {
+            "diff_pp": [
+              6.16357721249482,
+              1.2312570379900079,
+              8.016223348100404
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "20": {
+            "diff_pp": [
+              5.07900111278291,
+              2.6395789419581317,
+              5.058080774705442
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "50": {
+            "diff_pp": [
+              3.6555036326053947,
+              3.1851786025079765,
+              0.49692513914301184
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          }
+        }
+      },
+      "intersect": {
+        "fold_summary_diff_pp": [
+          2.5359610160620245,
+          0.2082715600062096,
+          1.2532695175515447
+        ],
+        "n_folds": 3,
+        "wilcoxon_exact_n3": {
+          "stat": 6.0,
+          "p_one_sided": 0.125,
+          "floor_note": "n=3 paired diffs -> best-achievable one-sided signed-rank p is 0.125 (1/8); cannot report p<0.05 with this design."
+        },
+        "sign_test_exact_n3": {
+          "n_used": 3,
+          "n_positive": 3,
+          "p_one_sided": 0.125
+        },
+        "fold_level_permutation_2pow3": {
+          "observed_mean_diff_pp": 1.3325006978732596,
+          "p_one_sided": 0.125,
+          "all_8_permutation_stats_pp": [
+            1.3325006978732596,
+            0.4969876861722298,
+            1.1936529912024532,
+            0.3581399795014234,
+            -0.3581399795014234,
+            -1.1936529912024532,
+            -0.4969876861722298,
+            -1.3325006978732596
+          ],
+          "note": "Exact sign-flip permutation over the 3 independent LOCO folds (2^3=8 equally likely sign patterns under H0: no systematic direction). This is the correct exchangeability unit -- folds are independent, K-values computed on the same fold are not."
+        },
+        "per_K_breakdown": {
+          "5": {
+            "diff_pp": [
+              1.9001369771225685,
+              -2.94406532868855,
+              3.397462057233913
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "10": {
+            "diff_pp": [
+              2.54568014250367,
+              -2.9705847274433705,
+              1.4201396004943523
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "20": {
+            "diff_pp": [
+              3.5636767415957338,
+              3.554320398384192,
+              0.11163883894720339
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "50": {
+            "diff_pp": [
+              2.134350203026125,
+              3.193415897772567,
+              0.08383757353070953
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          }
+        }
+      },
+      "v1_pooled": {
+        "fold_summary_diff_pp": [
+          4.948057219554625,
+          1.7511014019169964,
+          4.348638234285707
+        ],
+        "n_folds": 3,
+        "wilcoxon_exact_n3": {
+          "stat": 6.0,
+          "p_one_sided": 0.125,
+          "floor_note": "n=3 paired diffs -> best-achievable one-sided signed-rank p is 0.125 (1/8); cannot report p<0.05 with this design."
+        },
+        "sign_test_exact_n3": {
+          "n_used": 3,
+          "n_positive": 3,
+          "p_one_sided": 0.125
+        },
+        "fold_level_permutation_2pow3": {
+          "observed_mean_diff_pp": 3.682598951919109,
+          "p_one_sided": 0.125,
+          "all_8_permutation_stats_pp": [
+            3.682598951919109,
+            0.7835067957286381,
+            2.515198017307778,
+            -0.38389413888269275,
+            0.38389413888269275,
+            -2.515198017307778,
+            -0.7835067957286381,
+            -3.682598951919109
+          ],
+          "note": "Exact sign-flip permutation over the 3 independent LOCO folds (2^3=8 equally likely sign patterns under H0: no systematic direction). This is the correct exchangeability unit -- folds are independent, K-values computed on the same fold are not."
+        },
+        "per_K_breakdown": {
+          "5": {
+            "diff_pp": [
+              4.810682057889881,
+              -0.05497622252722545,
+              4.398916064730574
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "10": {
+            "diff_pp": [
+              5.6049199687027045,
+              1.23161851980641,
+              7.728635477871515
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "20": {
+            "diff_pp": [
+              5.499535695469815,
+              2.6387958904812048,
+              5.048190647785155
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "50": {
+            "diff_pp": [
+              3.8770911561560983,
+              3.1889674199075957,
+              0.2188107467555822
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          }
+        }
+      },
+      "min_ig": {
+        "fold_summary_diff_pp": [
+          1.741233014070409,
+          0.5891265845859694,
+          0.6634558794899326
+        ],
+        "n_folds": 3,
+        "wilcoxon_exact_n3": {
+          "stat": 6.0,
+          "p_one_sided": 0.125,
+          "floor_note": "n=3 paired diffs -> best-achievable one-sided signed-rank p is 0.125 (1/8); cannot report p<0.05 with this design."
+        },
+        "sign_test_exact_n3": {
+          "n_used": 3,
+          "n_positive": 3,
+          "p_one_sided": 0.125
+        },
+        "fold_level_permutation_2pow3": {
+          "observed_mean_diff_pp": 0.997938492715437,
+          "p_one_sided": 0.125,
+          "all_8_permutation_stats_pp": [
+            0.997938492715437,
+            0.5556345730554819,
+            0.6051874363247907,
+            0.1628835166648357,
+            -0.1628835166648357,
+            -0.6051874363247907,
+            -0.5556345730554819,
+            -0.997938492715437
+          ],
+          "note": "Exact sign-flip permutation over the 3 independent LOCO folds (2^3=8 equally likely sign patterns under H0: no systematic direction). This is the correct exchangeability unit -- folds are independent, K-values computed on the same fold are not."
+        },
+        "per_K_breakdown": {
+          "5": {
+            "diff_pp": [
+              3.1822943975678197,
+              -1.1115323684175116,
+              0.10536723860328223
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "10": {
+            "diff_pp": [
+              1.0116341982457477,
+              -0.40266406145388345,
+              2.2369872309860206
+            ],
+            "n": 3,
+            "n_positive": 2,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "20": {
+            "diff_pp": [
+              1.1693206106965337,
+              3.328759746880261,
+              0.2797805044956858
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          },
+          "50": {
+            "diff_pp": [
+              1.6016828497715352,
+              0.5419430213350118,
+              0.031688543874741626
+            ],
+            "n": 3,
+            "n_positive": 3,
+            "note": "n=3 per K; any signed-rank test here is floored at one-sided p=0.125"
+          }
+        }
+      }
+    }
+  },
+  "abstract_intro_mvps_vs_sview_audit": {
+    "identified_source": "results/r8_ensemble.json: method 'r8_union_K20each' (MVPS, K_per=20-per-score union) vs method 'r1' (S view, lambda=50, alone), pooled across 5 corpora' folds.",
+    "n": 23,
+    "n_per_corpus": {
+      "edu_kor": {
+        "n_folds": 3,
+        "mean_diff_pp": 0.9758000292873844
+      },
+      "codle_hashed": {
+        "n_folds": 4,
+        "mean_diff_pp": 2.2464493642153025
+      },
+      "bpi2012": {
+        "n_folds": 5,
+        "mean_diff_pp": 16.0501149378839
+      },
+      "sepsis": {
+        "n_folds": 4,
+        "mean_diff_pp": 0.8733527843282407
+      },
+      "oulad": {
+        "n_folds": 7,
+        "mean_diff_pp": -0.0847737220878307
+      }
+    },
+    "median_diff_pp": 1.1751938354352731,
+    "n_positive": 16,
+    "n_total": 23,
+    "wilcoxon_stat": 236.0,
+    "wilcoxon_p_one_sided": 0.0009424686431884766,
+    "matches_paper_claim": {
+      "claimed_median_pp": 1.18,
+      "claimed_p": 0.0009,
+      "claimed_n_pos_over_n": "16/23",
+      "reproduced_median_pp": 1.18,
+      "reproduced_p": 0.0009,
+      "reproduced_n_pos_over_n": "16/23"
+    },
+    "independence_assessment": "The 23 observations are (corpus, fold) pairs across 5 distinct corpora (edu_kor n=3, codle_hashed n=4, bpi2012 n=5, sepsis n=4, oulad n=7). Each fold within a corpus is a genuine distinct LOCO train/test split -- unlike Table V, no fold is measured twice under different hyperparameters for this test. Residual non-independence: folds within the same corpus share corpus-level base rates, so this is not fully i.i.d.; treat n=23 as 5 clusters of correlated folds, not 23 fully exchangeable units. This is a materially weaker concern than Table V's same-fold-reused-4x design and is standard practice for pooled cross-corpus tests, but should be acknowledged."
+  },
+  "verdict": {
+    "n12_pooled_reproduces": true,
+    "n12_pooled_is_valid_as_stated": false,
+    "n12_pooled_defense": [
+      "n=12 is real (3 LOCO folds x 4 K values = 12 fold-K pairs), so the reviewer's literal '3 folds -> impossible p<0.05' objection is based on mis-reading the caption's '3 folds' as the test's sample size. However, the 12 observations are NOT independent: the same 3 folds are reused across all 4 K values, so the effective number of independent units is 3, not 12. Reporting the pooled n=12 p-value as if it reflects 12 independent trials overstates precision and is not defensible as-is."
+    ],
+    "fold_level_n3_ceiling": "0.125 (1/8), for both exact signed-rank and exact sign/permutation test",
+    "recommended_framing": "Drop the pooled-n=12 significance claim in Table V's caption. Replace with either (i) the fold-level exact permutation/sign test result (report p_floor=0.125 honestly, or state '3/3 folds favor S at every K' as a consistency statement rather than a p-value), or (ii) descriptive language: 'S (lambda=50) attains the highest median AUC-diff against every baseline at every K, with the same sign in all 3 LOCO folds' -- i.e. consistent positive differences (n+/N per fold), not a single inferential p-value built on pseudo-replicated K sweeps.",
+    "abstract_intro_p0009_claim": "Reproduces exactly (median +1.18pp, p=0.0009, n+=16/23) from results/r8_ensemble.json using genuinely independent (corpus,fold) pairs. No pseudo-replication across K/lambda. Defensible as stated; add one sentence noting folds are clustered by corpus (5 corpora), not fully i.i.d."
+  }
+}

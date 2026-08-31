@@ -4,7 +4,7 @@ R7 scoring family — new candidate objectives for cross-dataset robustness.
 Diagnosis of R1 failure modes:
 - BPI: stab_only filters stab>=0.7 then sorts by support; wins via filter.
   R1 has no stability filter so picks high-mean low-stab patterns.
-- EduB: similar — stable patterns transfer better.
+- Codle: similar — stable patterns transfer better.
 - OULAD: weak base signal; no method can amplify what isn't there.
 - Edu: high cohort heterogeneity + high mean spread; R1's variance
   penalty is the right inductive bias.

@@ -1,0 +1,29 @@
+{
+  "tool": "SPMF PrefixSpan (separable frequency-only)",
+  "dataset": "BPI 2012 (sequences of length <=20)",
+  "n_sequences": 4365,
+  "runs": [
+    {
+      "min_sup": 0.3,
+      "wall_clock_seconds": 0.1353600025177002,
+      "patterns_found": 43
+    },
+    {
+      "min_sup": 0.2,
+      "wall_clock_seconds": 0.15297675132751465,
+      "patterns_found": 231
+    },
+    {
+      "min_sup": 0.1,
+      "wall_clock_seconds": 0.15130400657653809,
+      "patterns_found": 383
+    },
+    {
+      "min_sup": 0.05,
+      "wall_clock_seconds": 0.2179877758026123,
+      "patterns_found": 7299
+    }
+  ],
+  "mvps_polynomial_on_full_bpi_seconds": "~10 (proportional to Edu 22s; BPI is smaller)",
+  "note": "PrefixSpan mines all frequent sequential patterns without length/quality bound; our polynomial-bound miner mines the qualifying set at lambda=50 with combined Apriori + joint anti-monotone pruning."
+}
